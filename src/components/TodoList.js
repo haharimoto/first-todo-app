@@ -6,6 +6,9 @@ function TodoList(props) {
     <div className='todo-list'>
       <ul className='todo-list--ul'>
         <u>TODO LIST</u>
+        {/* display all todo's
+        if completed, only display completed
+        if incomplete, only display incomplete */}
 
         {props.toDos.map(toDo => (
           <Todo
