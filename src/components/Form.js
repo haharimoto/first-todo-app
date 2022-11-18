@@ -41,7 +41,7 @@ function Form(props) {
         <button className='form--button'>
           Add
         </button>
-        <select className='form--select' name="select" id="">
+        <select className='form--select' name="select" onChange={props.handleStatus}>
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="incomplete">Incomplete</option>

@@ -1,3 +1,20 @@
 * {
   background-color: gray;
 }
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+.App {
+  margin: 50px;
+  padding: 50px;
+  /* background-color: darkgray; */
+  border: 1px dashed;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

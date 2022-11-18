@@ -24,7 +24,7 @@ function Todo(props) {
 
   return (
     <div className='todo'>
-      <li className='todo--item'>
+      <li className={`todo--item ${props.completed ? "completed" : ""}`}>
         <b>{props.text}</b>--{props.completed ? "completed" : "incomplete"}
       </li>
       <button className='todo--complete' onClick={handleChange}>✔</button>

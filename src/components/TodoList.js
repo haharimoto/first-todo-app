@@ -6,11 +6,7 @@ function TodoList(props) {
     <div className='todo-list'>
       <ul className='todo-list--ul'>
         <u>TODO LIST</u>
-        {/* display all todo's
-        if completed, only display completed
-        if incomplete, only display incomplete */}
-
-        {props.toDos.map(toDo => (
+        {props.filtered.map(toDo => (
           <Todo
             key={toDo.id}
             id={toDo.id}
@@ -27,3 +23,5 @@ function TodoList(props) {
 }
 
 export default TodoList
+
+// replaced mapping props.toDo ==> mapping props.filtered
