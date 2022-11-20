@@ -5,7 +5,7 @@ import TodoList from "./components/TodoList";
 
 function App() {
   const [inputText, setInputText] = useState("")
-  const [toDos, setToDos] = useState(JSON.parse(localStorage.getItem("toDos")) || [])
+  const [toDos, setToDos] = useState(() => JSON.parse(localStorage.getItem("toDos")) || [])
   const [status, setStatus] = useState("all")
   const [filtered, setFiltered] = useState([])
 
