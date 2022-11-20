@@ -16,9 +16,6 @@ function App() {
 
   function handleFilter() {
     // filter out each toDos by completed(true/false) vs status(option values), using switch statement
-    // 1. if completed=true, then filter out the false ones
-    // 2. if completed=false, then filter out the true ones
-    // 3. default, show all
     switch (status) {
       case 'completed':
         setFiltered(toDos.filter(el => el.completed === true))
@@ -32,9 +29,27 @@ function App() {
     }
   }
 
+  function saveLocalToDos() {
+    localStorage.setItem("toDos", JSON.stringify(toDos))
+  }
+
+  function getLocalToDos() {
+    if (localStorage.getItem("toDos") === null) {
+      localStorage.setItem("toDos", JSON.stringify([]))
+    } else {
+      let toDoLocal = JSON.parse(localStorage.getItem("toDos"))
+      setToDos(toDoLocal)
+    }
+  }
+
   useEffect(() => {
     handleFilter()
+    // saveLocalToDos()
   }, [toDos, status])
+
+  // useEffect(() => {
+  //   getLocalToDos()
+  // }, [])
 
   return (
     <div className="App">

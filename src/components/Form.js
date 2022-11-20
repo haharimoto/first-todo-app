@@ -37,6 +37,7 @@ function Form(props) {
           name='input'
           value={props.inputText}
           // this makes the inputText change accordingly in the UI
+          autoComplete='off'
         />
         <button className='form--button'>
           Add
