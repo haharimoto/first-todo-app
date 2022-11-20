@@ -11,7 +11,7 @@
 body {
   font-family: "Karla", sans-serif;
   margin: 0;
-  background-color: rgb(111, 111, 111)
+  background-color: #0d1117
 }
 
 form {
@@ -46,6 +46,7 @@ form {
   /* align-items: center; */
   justify-content: center;
   /* border: 1px dashed green; */
+  color: white;
 }
 
 .todo-list--ul {
