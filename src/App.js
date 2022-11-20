@@ -5,7 +5,7 @@ import TodoList from "./components/TodoList";
 
 function App() {
   const [inputText, setInputText] = useState("")
-  const [toDos, setToDos] = useState([])
+  const [toDos, setToDos] = useState(JSON.parse(localStorage.getItem("toDos")) || [])
   const [status, setStatus] = useState("all")
   const [filtered, setFiltered] = useState([])
 
@@ -29,27 +29,11 @@ function App() {
     }
   }
 
-  function saveLocalToDos() {
-    localStorage.setItem("toDos", JSON.stringify(toDos))
-  }
-
-  function getLocalToDos() {
-    if (localStorage.getItem("toDos") === null) {
-      localStorage.setItem("toDos", JSON.stringify([]))
-    } else {
-      let toDoLocal = JSON.parse(localStorage.getItem("toDos"))
-      setToDos(toDoLocal)
-    }
-  }
-
   useEffect(() => {
     handleFilter()
-    // saveLocalToDos()
+    localStorage.setItem("toDos", JSON.stringify(toDos))
   }, [toDos, status])
 
-  // useEffect(() => {
-  //   getLocalToDos()
-  // }, [])
 
   return (
     <div className="App">

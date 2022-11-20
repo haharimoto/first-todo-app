@@ -5,7 +5,7 @@ function TodoList(props) {
   return (
     <div className='todo-list'>
       <ul className='todo-list--ul'>
-        <u>TODO LIST</u>
+        <b><u>TODO LIST</u></b>
         {props.filtered.map(toDo => (
           <Todo
             key={toDo.id}

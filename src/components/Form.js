@@ -27,28 +27,26 @@ function Form(props) {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          className='form--input'
-          type='text'
-          placeholder=''
-          onChange={handleChange}
-          name='input'
-          value={props.inputText}
-          // this makes the inputText change accordingly in the UI
-          autoComplete='off'
-        />
-        <button className='form--button'>
-          Add
-        </button>
-        <select className='form--select' name="select" onChange={props.handleStatus}>
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="incomplete">Incomplete</option>
-        </select>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        className='form--input'
+        type='text'
+        placeholder=''
+        onChange={handleChange}
+        name='input'
+        value={props.inputText}
+        // this makes the inputText change accordingly in the UI
+        autoComplete='off'
+      />
+      <button className='form--button'>
+        Add
+      </button>
+      <select className='form--select' name="select" onChange={props.handleStatus}>
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="incomplete">Incomplete</option>
+      </select>
+    </form>
   )
 }
 

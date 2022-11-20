@@ -1,17 +1,69 @@
 * {
-  background-color: gray;
+  box-sizing: border-box;
 }
+
+/* html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 body {
   font-family: "Karla", sans-serif;
   margin: 0;
+  background-color: rgb(111, 111, 111)
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px dashed blue; */
+  gap: 2px;
+}
+
+.form--input {
+  border-radius: 5px;
+  text-indent: 5px;
+}
+
+.form--button {
+  border-radius: 5px;
+}
+
+.form--select {
+  border-radius: 5px;
 }
 
 .App {
-  margin: 50px;
-  padding: 50px;
-  /* background-color: darkgray; */
-  border: 1px dashed;
+  margin-top: 100px;
+  height: 100px;
+  /* border: 1px dashed; */
+}
+
+.todo-list {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* border: 1px dashed green; */
+}
+
+.todo-list--ul {
+  list-style: none;
+  margin-top: 50px;
+  padding: 0px;
+}
+
+.todo {
+  margin: 10px 0px 10px 0px
+}
+
+.todo--complete {
+  border-radius: 5px;
+}
+
+.todo--delete {
+  border-radius: 5px;
 }
 
 .completed {
