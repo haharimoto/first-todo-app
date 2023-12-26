@@ -1,8 +1,6 @@
 import React from 'react'
 
 function Todo(props) {
-  // complete function
-  // delete function
 
   function handleDelete() {
     props.setToDos(props.toDos.filter((el) => el.id !== props.toDo.id))
